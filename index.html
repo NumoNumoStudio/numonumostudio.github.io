@@ -3,17 +3,330 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NumoNumo Studio</title>
+  <meta name="description" content="NumoNumo Studio - Mobil oyunlar ve kullanışlı uygulamalar. NumoNumo ve TurnuvaCep projelerimizi keşfedin.">
+  <meta name="theme-color" content="#171d29">
+  <title>NumoNumo Studio | Games & Apps</title>
+
+  <style>
+    :root {
+      --bg: #171d29;
+      --card: #283142;
+      --accent: #f47968;
+      --text: #f8fafc;
+      --muted: #b9c5d5;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system,
+                   "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      max-width: 1080px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    header {
+      border-bottom: 1px solid #ffffff18;
+    }
+
+    nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .links a:hover { color: var(--accent); }
+
+    .hero {
+      padding-top: 110px;
+      padding-bottom: 105px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 20px 0;
+    }
+
+    h1 span { color: var(--accent); }
+
+    .intro {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 600px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 13px 24px;
+      background: var(--accent);
+      color: #171d29;
+      border-radius: 10px;
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .button:hover { background: #ff998a; }
+
+    section { padding-bottom: 95px; }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      letter-spacing: -1px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .app {
+      padding: 32px;
+      background: var(--card);
+      border: 1px solid #ffffff12;
+      border-radius: 20px;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+      background: #394255;
+      margin-bottom: 25px;
+    }
+
+    .app h3 {
+      font-size: 25px;
+      margin: 0 0 10px;
+    }
+
+    .app p {
+      color: var(--muted);
+      min-height: 80px;
+    }
+
+    .tag {
+      display: inline-block;
+      border-radius: 100px;
+      padding: 5px 12px;
+      color: #ffb4a8;
+      background: #f479681b;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .contact {
+      background: var(--card);
+      padding: 38px;
+      border-radius: 20px;
+    }
+
+    .contact p { color: var(--muted); }
+
+    .contact a {
+      color: #ffb4a8;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 28px 0 38px;
+      border-top: 1px solid #ffffff18;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+      }
+
+      .links { gap: 18px; }
+
+      .hero {
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
+
+      .apps { grid-template-columns: 1fr; }
+
+      .app p { min-height: 0; }
+
+      .contact { padding: 25px; }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>NumoNumo Studio</h1>
-  <p>Mobile Games & Apps</p>
+  <header>
+    <nav class="container" aria-label="Ana menü">
+      <a class="brand" href="#">
+        NumoNumo <span>Studio.</span>
+      </a>
+      <div class="links">
+        <a href="#apps">Uygulamalar</a>
+        <a href="#about">Hakkımızda</a>
+        <a href="#contact">İletişim</a>
+      </div>
+    </nav>
+  </header>
 
-  <h2>Our Apps</h2>
-  <p>NumoNumo - Mobile Puzzle Game</p>
-  <p>TurnuvaCep - Tournament Manager</p>
+  <main>
+    <div class="container hero">
+      <div class="eyebrow">
+        INDEPENDENT MOBILE STUDIO
+      </div>
 
-  <h2>Support</h2>
-  <p>Support information will be available soon.</p>
+      <h1>
+        Küçük fikirler.<br>
+        <span>Büyük deneyimler.</span>
+      </h1>
+
+      <p class="intro">
+        NumoNumo Studio, eğlenceli mobil oyunlar
+        ve günlük yaşamı kolaylaştıran kullanışlı
+        uygulamalar geliştirir.
+      </p>
+
+      <a class="button" href="#apps">
+        Projelerimizi Keşfet
+      </a>
+    </div>
+
+    <section id="apps" class="container">
+      <h2>Uygulamalarımız</h2>
+      <p class="section-intro">
+        Geliştirmekte olduğumuz mobil projeler.
+      </p>
+
+      <div class="apps">
+        <article class="app">
+          <div class="app-icon" aria-hidden="true">
+            🎮
+          </div>
+          <h3>NumoNumo</h3>
+          <p>
+            Eğlenceli mobil oyun deneyimleri.
+            İlk sürümümüz üzerinde çalışıyoruz.
+          </p>
+          <span class="tag">Geliştirme aşamasında</span>
+        </article>
+
+        <article class="app">
+          <div class="app-icon" aria-hidden="true">
+            🏆
+          </div>
+          <h3>TurnuvaCep</h3>
+          <p>
+            Futbol, voleybol ve basketbol
+            turnuvalarını kolayca planlamaya,
+            fikstür ve sonuçları yönetmeye
+            yardımcı olan mobil uygulama.
+          </p>
+          <span class="tag">Geliştirme aşamasında</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <h2>NumoNumo Studio Hakkında</h2>
+      <p class="section-intro">
+        Sadelik, kullanışlılık ve keyifli
+        deneyimler bizim için önemli.
+        Her projede anlaşılır tasarımlar
+        ve sorunsuz bir kullanım hedefliyoruz.
+      </p>
+    </section>
+
+    <section id="contact" class="container">
+      <div class="contact">
+        <h2>Bizimle İletişime Geçin</h2>
+        <p>
+          Uygulamalarımız hakkında sorularınız,
+          önerileriniz veya destek talepleriniz
+          için bize ulaşabilirsiniz.
+        </p>
+
+        <a href="mailto:numonumostudio.support@gmail.com">
+          numonumostudio.support@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 NumoNumo Studio</span>
+      <span>Mobile Games & Apps</span>
+    </div>
+  </footer>
 </body>
 </html>
